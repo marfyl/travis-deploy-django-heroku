@@ -1,13 +1,39 @@
+# Disable sudo to speed up the build
+sudo: false
+
+# Set the build language to Python
 language: python
+
+# Set the python version to 3.6
 python:
-  - "3.6"
+- '3.6'
+
+# Addons
 addons:
-  postgresql: "9.6"
+  postgresql: '9.6'
+  
+# Environment
 env:
-  - DATABASE_URL=postgres://postgres:postgres@localhost:5432/travis_ci_test
+- DATABASE_URL=postgres://postgres:postgres@localhost:5432/travis_ci_test
+
+# Install pip dependencies
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
+
+# Create test database
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-script: 
-  - python manage.py test
+- psql -c 'create database travis_ci_test;' -U postgres
+
+# Run the unit test
+script:
+- python manage.py test
+
+# Deploy to heroku server
+deploy:
+  provider: heroku
+  api_key:
+    secure: SECURE_KEY
+  app: event-charge
+  on:
+    repo: marfyl/travis-heroku
+    branch: master
