@@ -1,1 +1,1 @@
-# travis-python
+# travis-python-django
