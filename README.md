@@ -4,7 +4,7 @@
 
 ## Authors
 
-* marfyl - *Software Engineer* - [marfyl](https://github.com/marfyl)
+* [marfyl](https://github.com/marfyl) - *Software Engineer*
 
 ## License
 
