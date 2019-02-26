@@ -5,7 +5,3 @@
 ## Authors
 
 * [marfyl](https://github.com/marfyl) - *Software Engineer*
-
-## License
-
-This project is licensed under the MIT License
