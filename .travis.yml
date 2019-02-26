@@ -4,9 +4,15 @@ sudo: false
 # Set the build language to Python
 language: python
 
-# Set the python version to 3.6
+# Cache to speed up the build
+cache: pip
+
+# Set the python versions
 python:
-- '3.6'
+- 2.7
+- 3.4
+- 3.5
+- 3.6
 
 # Addons
 addons:
