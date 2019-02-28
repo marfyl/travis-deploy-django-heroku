@@ -1,4 +1,4 @@
-# travis-deploy-heroku-django
+# travis-deploy-django-heroku
 
 .travis.yml example file to deploy heroku app with django
 
